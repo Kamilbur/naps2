@@ -17,6 +17,7 @@ internal class SettingsForm : EtoDialogBase
     private readonly EnumDropDownWidget<ScanButtonDefaultAction> _scanButtonDefaultAction = new(scale: false);
     private readonly EnumDropDownWidget<SaveButtonDefaultAction> _saveButtonDefaultAction = new(scale: false);
     private readonly CheckBox _clearAfterSaving = C.CheckBox(UiStrings.ClearAfterSaving);
+    private readonly CheckBox _alwaysRunScanInBackground = C.CheckBox(UiStrings.AlwaysRunScanInBackground);
     private readonly CheckBox _keepSession = C.CheckBox(UiStrings.KeepSession);
     private readonly CheckBox _singleInstance = C.CheckBox(UiStrings.SingleInstanceDesc);
     private readonly ActionCommand _pdfSettingsCommand;
@@ -97,6 +98,7 @@ internal class SettingsForm : EtoDialogBase
                 L.Column(
                     _clearAfterSaving,
                     _keepSession,
+                    _alwaysRunScanInBackground,
                     PlatformCompat.System.SupportsSingleInstance
                         ? _singleInstance
                         : C.None()
@@ -136,6 +138,7 @@ internal class SettingsForm : EtoDialogBase
         _saveButtonDefaultAction.SelectedItem = config.Get(c => c.SaveButtonDefaultAction);
         _saveButtonDefaultAction.Enabled = !config.AppLocked.Has(c => c.SaveButtonDefaultAction);
         UpdateCheckbox(_clearAfterSaving, c => c.DeleteAfterSaving);
+        UpdateCheckbox(_alwaysRunScanInBackground, c => c.AlwaysRunScanInBackground);
         UpdateCheckbox(_keepSession, c => c.KeepSession);
         UpdateCheckbox(_singleInstance, c => c.SingleInstance);
     }
@@ -160,6 +163,7 @@ internal class SettingsForm : EtoDialogBase
         SetIfChanged(c => c.ScanButtonDefaultAction, _scanButtonDefaultAction.SelectedItem);
         SetIfChanged(c => c.SaveButtonDefaultAction, _saveButtonDefaultAction.SelectedItem);
         SetIfChanged(c => c.DeleteAfterSaving, _clearAfterSaving.IsChecked());
+        SetIfChanged(c => c.AlwaysRunScanInBackground, _alwaysRunScanInBackground.IsChecked());
         SetIfChanged(c => c.KeepSession, _keepSession.IsChecked());
         SetIfChanged(c => c.SingleInstance, _singleInstance.IsChecked());
         transact.Commit();

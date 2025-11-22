@@ -14,6 +14,7 @@
   <DeleteAfterSaving mode="default">false</DeleteAfterSaving>
   <KeepSession mode="default">false</KeepSession>
   <SingleInstance mode="default">false</SingleInstance>
+  <AlwaysRunScanInBackground mode="default">false</AlwaysRunScanInBackground>
   <HideOcrButton>false</HideOcrButton>
   <HideImportButton>false</HideImportButton>
   <HideSavePdfButton>false</HideSavePdfButton>

@@ -636,6 +636,9 @@
   <data name="ClearAfterSaving" xml:space="preserve">
     <value>Wyczyść obrazy po zapisaniu</value>
   </data>
+  <data name="AlwaysRunScanInBackground" xml:space="preserve">
+    <value>Zawsze uruchamiaj skanowanie w tle</value>
+  </data>
   <data name="KeepSession" xml:space="preserve">
     <value>Zachowaj obrazy między sesjami</value>
   </data>

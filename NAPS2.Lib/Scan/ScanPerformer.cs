@@ -212,7 +212,8 @@ internal class ScanPerformer : IScanPerformer
 
         Invoker.Current.InvokeDispatch(() =>
         {
-            if (scanParams.Modal)
+            bool in_background = _config.Get(c => c.AlwaysRunScanInBackground);
+            if (scanParams.Modal && !in_background)
             {
                 _operationProgress.ShowModalProgress(op);
             }

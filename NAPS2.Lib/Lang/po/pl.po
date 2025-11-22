@@ -395,6 +395,10 @@ msgstr "Wyczyść wszystkie"
 msgid "Clear images after saving"
 msgstr "Wyczyść obrazy po zapisaniu"
 
+#: UiStrings.resx$AlwaysRunScanInBackground$Message
+msgid "Always run scan in background"
+msgstr "Zawsze uruchamiaj skanowanie w tle"
+
 #: MiscResources.resx$Close$Message
 msgid "Close"
 msgstr "Zamknij"

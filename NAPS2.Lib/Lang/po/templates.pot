@@ -389,6 +389,10 @@ msgstr ""
 msgid "Clear images after saving"
 msgstr ""
 
+#: UiStrings.resx$AlwaysRunScanInBackground$Message
+msgid "Always run scan in background"
+msgstr ""
+
 #: MiscResources.resx$Close$Message
 msgid "Close"
 msgstr ""

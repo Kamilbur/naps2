@@ -112,6 +112,9 @@ public class CommonConfig
     public bool DeleteAfterSaving { get; set; }
 
     [Common]
+    public bool AlwaysRunScanInBackground { get; set; }
+
+    [Common]
     public bool KeepSession { get; set; }
 
     [Common]

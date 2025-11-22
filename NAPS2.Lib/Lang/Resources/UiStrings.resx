@@ -744,6 +744,9 @@
   <data name="ClearAfterSaving" xml:space="preserve">
     <value>Clear images after saving</value>
   </data>
+  <data name="AlwaysRunScanInBackground" xml:space="preserve">
+    <value>Always run scan in background</value>
+  </data>
   <data name="KeepSession" xml:space="preserve">
     <value>Keep images across sessions</value>
   </data>

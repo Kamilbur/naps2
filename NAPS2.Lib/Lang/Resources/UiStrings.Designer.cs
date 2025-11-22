@@ -463,6 +463,15 @@ namespace NAPS2.Lang.Resources {
                 return ResourceManager.GetString("ClearAfterSaving", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Always run scan in background.
+        /// </summary>
+        internal static string AlwaysRunScanInBackground {
+            get {
+                return ResourceManager.GetString("AlwaysRunScanInBackground", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Clear All.
